@@ -145,7 +145,7 @@ resources:
 
 9. Get your `public key` (under `applications->${YOUR_APP_NAME}->settings->Show Advanced Settings->Certificates->DOWNLOAD CERTIFICATE`). Download it as `PEM` format and save it as a new file called `public_key`, no extension
 
-10. Deploy the service with `serverless-deploy` and grab the public and private endpoints.
+10. Deploy the service with `serverless deploy` or `sls deploy` and grab the public and private endpoints.
 
 11. Plugin your `AUTH0_CLIENT_ID`, `AUTH0_DOMAIN`, and the `PUBLIC_ENDPOINT` + `PRIVATE_ENDPOINT` from aws in top of the `frontend/app.js` file.
 
@@ -161,6 +161,10 @@ resources:
 12. Configure the `Allowed Callback URL` and `Allowed Origins` in your auth0 client in the [auth0 dashboard](https://manage.auth0.com). We used `http://auth0-serverless-protected-routes-demo.surge.sh/` for our demo.
 
 For this part, I was not sure what to use, so I just used https://google.com for `Allowed Callback URL` and http://localhost:3000 for `Allowed Origins`. I did this in case it caused something to break if I did not have anything else in place.
+
+## Sync to S3
+
+
 
 ## Custom authorizer functions
 
