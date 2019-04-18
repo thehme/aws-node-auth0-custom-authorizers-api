@@ -17,17 +17,19 @@ Custom Authorizers allow you to run an AWS Lambda Function before your targeted 
 
 1. `npm install` json web token dependencies
 
-a. `npm install --save-dev serverless-single-page-app-plugin` to install the plugin needed to upload static files to S3
+2. `npm install --save-dev serverless-single-page-app-plugin` to install the plugin needed to upload static files to S3
 
-2. Setup an [auth0 application](https://auth0.com/docs/applications).
+3. Copy `node_modules/serverless-single-page-app-plugin` into the root folder
 
-3. Get your `Client ID` (under `applications->${YOUR_APP_NAME}->settings`) and plugin your `AUTH0_CLIENT_ID` in a new file called `secrets.json` (based on `secrets.example.json`).
+3. Setup an [auth0 application](https://auth0.com/docs/applications).
 
-4. Get your `public key` (under `applications->${YOUR_APP_NAME}->settings->Show Advanced Settings->Certificates->DOWNLOAD CERTIFICATE`). Download it as `PEM` format and save it as a new file called `public_key`
+4. Get your `Client ID` (under `applications->${YOUR_APP_NAME}->settings`) and plugin your `AUTH0_CLIENT_ID` in a new file called `secrets.json` (based on `secrets.example.json`).
 
-5. Deploy the service with `serverless-deploy` and grab the public and private endpoints.
+5. Get your `public key` (under `applications->${YOUR_APP_NAME}->settings->Show Advanced Settings->Certificates->DOWNLOAD CERTIFICATE`). Download it as `PEM` format and save it as a new file called `public_key`
 
-6. Plugin your `AUTH0_CLIENT_ID`, `AUTH0_DOMAIN`, and the `PUBLIC_ENDPOINT` + `PRIVATE_ENDPOINT` from aws in top of the `frontend/app.js` file.
+6. Deploy the service with `serverless-deploy` and grab the public and private endpoints.
+
+7. Plugin your `AUTH0_CLIENT_ID`, `AUTH0_DOMAIN`, and the `PUBLIC_ENDPOINT` + `PRIVATE_ENDPOINT` from aws in top of the `frontend/app.js` file.
 
   ```js
   /* frontend/app.js */
