@@ -6,7 +6,7 @@ This is an example of how to protect API endpoints with [auth0](https://auth0.co
 
 Custom Authorizers allow you to run an AWS Lambda Function before your targeted AWS Lambda Function. This is useful for Microservice Architectures or when you simply want to do some Authorization before running your business logic.
 
-### [View live demo](http://auth0-serverless-protected-routes-demo.surge.sh/)
+### [View live demo](d3e25i2un2typ7.cloudfront.net)
 
 ## Use cases
 
@@ -158,13 +158,26 @@ resources:
   const PRIVATE_ENDPOINT = 'https://your-aws-endpoint-here.us-east-1.amazonaws.com/dev/api/private';
   ```
 
-12. Configure the `Allowed Callback URL` and `Allowed Origins` in your auth0 client in the [auth0 dashboard](https://manage.auth0.com). We used `http://auth0-serverless-protected-routes-demo.surge.sh/` for our demo.
+12. Configure the `Allowed Callback URL` and `Allowed Origins` in your auth0 client in the [auth0 dashboard](https://manage.auth0.com).
 
 For this part, I was not sure what to use, so I just used https://google.com for `Allowed Callback URL` and http://localhost:3000 for `Allowed Origins`. I did this in case it caused something to break if I did not have anything else in place.
 
 ## Sync to S3
 
+At this point, the static files need to be pushed to S3 using `serverless syncToS3`, but for some reason this is not working for me. Since the plug is running the `aws` command to do this, I decided to test it directly:
 
+`aws s3 sync app/ s3://yourBucketName123/`
+
+Once I did this, it outputted something like this:
+
+```
+> aws s3 sync app s3://aws-custom-authorizer-auth0-test
+upload: app/app.js to s3://aws-custom-authorizer-auth0-test/app.js
+upload: app/app.css to s3://aws-custom-authorizer-auth0-test/app.css
+upload: app/index.html to s3://aws-custom-authorizer-auth0-test/index.html
+```
+
+You can confirmed the files were uploaded by checking your bucket in S3 at https://s3.console.aws.amazon.com/s3/buckets. Also, to view the deployed app, check the CloudFront distrution at https://console.aws.amazon.com/cloudfront and find the domain name. Put that in your URL and you should see the app loaded on this URL.
 
 ## Custom authorizer functions
 
