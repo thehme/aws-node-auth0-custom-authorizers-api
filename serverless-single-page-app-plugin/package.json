@@ -1,0 +1,46 @@
+{
+  "_from": "serverless-single-page-app-plugin",
+  "_id": "serverless-single-page-app-plugin@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha1-b3FKt1BtRLLL1PPGjRpsIDC3t7g=",
+  "_location": "/serverless-single-page-app-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "serverless-single-page-app-plugin",
+    "name": "serverless-single-page-app-plugin",
+    "escapedName": "serverless-single-page-app-plugin",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/serverless-single-page-app-plugin/-/serverless-single-page-app-plugin-1.0.2.tgz",
+  "_shasum": "6f714ab7506d44b2cbd4f3c68d1a6c2030b7b7b8",
+  "_spec": "serverless-single-page-app-plugin",
+  "_where": "/Users/brenda/code/hifi/aws-node-auth0-custom-authorizers-api",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/amaysim-au/serverless-single-page-app-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "A plugin for Serverless Framework, to simplify deploying Single Page Application using S3 and CloudFront.",
+  "homepage": "https://github.com/amaysim-au/serverless-single-page-app-plugin#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "serverless-single-page-app-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaysim-au/serverless-single-page-app-plugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.2"
+}
