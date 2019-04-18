@@ -6,7 +6,7 @@ This is an example of how to protect API endpoints with [auth0](https://auth0.co
 
 Custom Authorizers allow you to run an AWS Lambda Function before your targeted AWS Lambda Function. This is useful for Microservice Architectures or when you simply want to do some Authorization before running your business logic.
 
-### [View live demo](d3e25i2un2typ7.cloudfront.net)
+### [View live demo](https://aws-custom-authorizer-auth0-test.s3-us-west-2.amazonaws.com/index.html)
 
 ## Use cases
 
