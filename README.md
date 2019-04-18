@@ -1,15 +1,6 @@
-<!--
-title: 'AWS API Gateway Custom Authorizer Function with Auth0 example in NodeJS'
-description: 'This is an example of how to protect API endpoints with Auth0, JSON Web Tokens (jwt) and a custom authorizer lambda function.'
-layout: Doc
-framework: v1
-platform: AWS
-language: nodeJS
-authorLink: 'https://github.com/erezrokah'
-authorName: 'Erez Rokah'
-authorAvatar: 'https://avatars0.githubusercontent.com/u/26760571?v=4&s=140'
--->
 # API Gateway Custom Authorizer Function + Auth0
+
+This is an extension of the serveless example: https://github.com/serverless/examples/tree/master/aws-node-auth0-custom-authorizers-api
 
 This is an example of how to protect API endpoints with [auth0](https://auth0.com/), JSON Web Tokens (jwt) and a [custom authorizer lambda function](https://serverless.com/framework/docs/providers/aws/events/apigateway#http-endpoints-with-custom-authorizers).
 
@@ -25,6 +16,8 @@ Custom Authorizers allow you to run an AWS Lambda Function before your targeted 
 ## Setup
 
 1. `npm install` json web token dependencies
+
+a. `npm install --save-dev serverless-single-page-app-plugin` to install the plugin needed to upload static files to S3
 
 2. Setup an [auth0 application](https://auth0.com/docs/applications).
 
